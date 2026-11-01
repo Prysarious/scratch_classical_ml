@@ -1,14 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-np.random.seed(42)
 n_samples = 500
 
 horizontal = np.random.uniform(0, 10, n_samples)
-true_w = 3.5
-true_b = 5.0
-noise = np.random.normal(0, 2.0, n_samples)
-vertical = true_w * horizontal + true_b + noise
+noise = np.random.normal(0, 1.0, n_samples)
+vertical = horizontal + noise + 2
 
 w = 0.0
 b = 0.0
